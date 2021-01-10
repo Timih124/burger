@@ -6,7 +6,10 @@
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
-                 {{> burgers/burger-block devoured=false}}
+            <li>{{burger_name}}
+
+                <button data-id={{id}} class="devouredbtn">Devour It</button>
+            </li>
             {{/unless}}
             {{/each}}
         </ul>
@@ -16,17 +19,17 @@
     <ul>
         {{#each burgers}}
         {{#if devoured}}
-        {{> burgers/burger-block devoured=true}}
+        {{burger_name}}
         {{/if}}
         {{/each}}
     </ul>   
 </div>
 </div>
 
-<form class="createForm">
+<form  action="/api/burgers" method="POST" class="createForm">
     <div class="formGroup">
     <label for="burger_name">Burger Name:</label>
-    <input type="text" id="burger_name" name="name">
+    <input type="text" id="burger_name" name="burger_name">
     <button class = "btn btn-primary" type="submit">Add Your Burger</button>
     </div>
 </form>

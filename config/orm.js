@@ -3,14 +3,21 @@
 var connection = require("./connection.js")
 
 var orm = {
-    selectALL: function(tableName, burgersModel){
+    selectAll: function(tableName, cb){
         connection.query("SELECT * FROM ??", tableName, function(err, res){
-            burgerModel(res)
+            cb(res)
 
         })
+    },
+    create: function(table, columnNames, values, cb){
+        connection.query("INSERT INTO ?? (??, ??) VALUES (?, ?)", [table, columnNames[0], columnNames[1], values[0], values[1]], function(err, res){
+            cb(res)
+        })
+    
+    
     }
-
+    
 
 };
 
-module.exports = orm
+module.exports = orm;

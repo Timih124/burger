@@ -4,7 +4,7 @@ var expressHb = require("express-handlebars")
 
 // creating servers
 var app = express()
-var PORT = porcess.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 //  static content for the app in the "public" directory from app directory.
 

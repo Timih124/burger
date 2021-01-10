@@ -2,8 +2,16 @@
 
 var orm = require("../config/orm.js");
 
-var burgers_model = {
-    selectALL: function(cbController){
-        orm.selectALL("burgers, function")
+var burgersModel = {
+    selectAll: function(cb){
+        orm.selectAll("burgers", function(res){
+            cb(res)
+        })
+    },
+    create: function(columnNames, values, cb){
+        orm.create("burgers", columnNames, values, function(res){
+            cb(res)
+        })
     }
 }
+module.exports = burgersModel
