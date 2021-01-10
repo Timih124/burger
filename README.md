@@ -2,7 +2,7 @@
 
   ## Description 
   
-  Created a burger logger with MYSQL, Node, Express, Handlessbars and an ORM. I used Node and MYSQL to query and route data in my app. Then I used Handlebars to geneate my HTML. After completing assignment I deployed it on Heroku.
+  Created a burger logger app with MYSQL, Node, Express, Handlebars and an ORM. I used Node and MYSQL to query and route data in my app. Then I used Handlebars to geneate my HTML. After completing assignment I deployed it on Heroku.
   
   
   ## Table of Contents (Optional)

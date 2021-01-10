@@ -3,9 +3,14 @@
 var connection = require("./connection.js")
 
 var orm = {
-    selectALL: function()
+    selectALL: function(tableName, burgersModel){
+        connection.query("SELECT * FROM ??", tableName, function(err, res){
+            burgerModel(res)
+
+        })
+    }
 
 
-}
+};
 
 module.exports = orm
